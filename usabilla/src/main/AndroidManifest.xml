@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="test.usabilla">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_usabilla">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application tools:ignore="AllowBackup,LockedOrientationActivity,MissingApplicationIcon">
+        <activity
+            android:name=".UsabillaActivity"
+            android:label="Usabilla"
+            android:theme="@style/Theme.UsabillaDynamicFeatureModule"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait"/>
+    </application>
+</manifest>
